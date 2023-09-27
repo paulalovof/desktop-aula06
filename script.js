@@ -23,15 +23,15 @@ function mudaCorFundo() {
 
     if(cor == null){
         localStorage.setItem('corFundo', "dark");
-        //document.getElementById('fundo').innerHTML 
+        document.style.background=black;
         
     }else if(cor == "dark"){
         localStorage.setItem('corFundo', "light");
-        //body.style.background = white;
+        document.style.background = white;
         
     }else{
         localStorage.setItem('corFundo', "dark");
-        //body.style.background = black;
+        document.style.background = black;
     }
 }
 
@@ -46,7 +46,7 @@ function contaVisitas() {
         localStorage.setItem('visitas', +1);
         //document.getElementById('contadorVisitas').innerHTML = visita;
     }else{
-       var visita = visita + 1;
+       var visita = +visita + 1;
         localStorage.setItem('visitas', visita);
         console.log("Visita: ", visita);
         //document.getElementById('contadorVisitas').innerHTML = visita;
